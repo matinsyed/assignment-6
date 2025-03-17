@@ -26,7 +26,7 @@ document.getElementById("btn-login").addEventListener("click", function(event){
     {
         if(convertedPIN === 123456)
         {
-            console.log(accountNumber, pin);
+            // console.log(accountNumber, pin);
             alert("Login Successful.");  
             showSections();
             document.getElementById("user-name").value = '';
