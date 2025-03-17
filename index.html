@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-6 by Syed Abdul Matin</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body class="poppins-font">
+    <header class="bg-[#C6BDBD] bg-gradient-to-r from-[#FFFFFF] border-y-2 py-2">
+        <nav class="w-11/12 mx-auto flex justify-between items-center">
+            <div class="logo-section">
+                <h2 class="flex items-center">
+                    English
+                    <img class="w-7 h-7" src="./assets/logo.png" alt="logo">
+                    <span class="tiro-bangla-font">জানালা</span>
+                </h2>
+            </div>
+            <div class="menu-section">
+                <div class="flex gap-2">
+                    <a href="">
+                        <button class="btn btn-outline btn-primary">
+                            <img src="./assets/fa-circle-question.png" alt="">
+                            FAQ
+                        </button>
+                    </a>
+                    <a href="">
+                        <button class="btn btn-outline btn-primary">
+                            <img src="./assets/fa-book-open.png" alt="">
+                            Learn
+                        </button>
+                    </a>
+                    <a href="">
+                        <button class="btn btn-outline btn-primary">
+                            <img src="./assets/fa-arrow-right-from-bracket.png" alt="">
+                            Logout
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </nav>        
+    </header>
+    <main>
+        <div id="banner" class="w-11/12 mx-auto flex justify-between items-center">
+            <div class="login-section">
+                <h1 class="font-bold text-5xl mb-3"><span class="text-[#00BCFF]">English</span> is Easy!!</h1>
+                <p class="hind-siliguri-font mb-3">
+                    আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ
+                </p>
+                <input type="text" name="name" placeholder="Enter Your Name" class="p-1"><br><br>
+                <input type="password" name="pin" id="" value="123456"  class="p-1"><br><br>
+                <button type="submit" class="btn btn-primary">Get Started</button>
+            </div>
+            <div class="hero-section">
+                <img src="./assets/hero-student.png" alt="">
+            </div>
+        </div>
+        <div id="learn-section" class="w-11/12 mx-auto my-24">
+            <div id="lesson-menu-section" class="">
+                <h2 class="font-bold text-5xl text-center">
+                    <span class="text-[#00BCFF]">Let's </span>Learn Vocabularies
+                </h2>
+                <div id="lesson-menu" class="my-5 flex justify-center gap-4">
+                    <button class="btn btn-outline btn-primary">
+                        <img src="./assets/fa-book-open.png" alt="">
+                        Lesson-1
+                    </button>
+                    <button class="btn btn-outline btn-primary">
+                        <img src="./assets/fa-book-open.png" alt="">
+                        Lesson-2
+                    </button>
+                    <button class="btn btn-outline btn-primary">
+                        <img src="./assets/fa-book-open.png" alt="">
+                        Lesson-3
+                    </button>
+                </div>
+            </div>
+            <div id="lesson-card" class="bg-[#F8F8F8] flex flex-col gap-5 rounded-2xl justify-center items-center py-10 mx-auto">
+               <p class="text-xs font-thin hind-siliguri-font txt-[#79716B]"> আপনি এখনো কোন Lesson Select করেন নি</p>
+               <p class="font-medium hind-siliguri-font text-3xl txt-[#292524]"> একটি Lesson Select করুন।</p>
+            </div>
+        </div>
+        <div id="faq-section" class="w-11/12 mx-auto my-24">
+            <div id="faq-title" class="mb-10">
+                <h2 class="font-bold text-5xl text-center">
+                    <span class="text-[#00BCFF]">Frequently </span>Asked Questions
+                </h2>
+            </div>
+            <div class="faq-accordion flex flex-col gap-4">
+                 <div class="collapse collapse-plus bg-[#F8F8F8]">
+                    <input type="radio" name="my-accordion-3" checked="checked" />
+                    <div class="collapse-title font-medium">How do I create an account?</div>
+                    <div class="collapse-content text-sm text-[#62748E]">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
+                  </div>
+                  <div class="collapse collapse-plus bg-[#F8F8F8]">
+                    <input type="radio" name="my-accordion-3" />
+                    <div class="collapse-title font-medium">I forgot my password. What should I do?</div>
+                    <div class="collapse-content text-sm text-[#62748E]">Click on "Forgot Password" on the login page and follow the instructions sent to your email.</div>
+                  </div>
+                  <div class="collapse collapse-plus  bg-[#F8F8F8]">
+                    <input type="radio" name="my-accordion-3" />
+                    <div class="collapse-title font-medium">How do I update my profile information?</div>
+                    <div class="collapse-content text-sm text-[#62748E]">Go to "My Account" settings and select "Edit Profile" to make changes.</div>
+                  </div>
+            </div>
+        </div>
+    </main>
+    <footer class="border-t-2 border-[#FFEBEB] py-24">
+        <div class="w-11/12 mx-auto">
+            <h2 class="flex items-center font-semibold text-xl mb-3">
+                English
+                <img class="w-7 h-7" src="./assets/logo.png" alt="logo">
+                <span class="tiro-bangla-font">জানালা</span>
+            </h2>
+            <p class="hind-siliguri-font font-medium text-xl">ইংরেজি শিখুন সহজে</p>
+            <p class="hind-siliguri-font">Providing ED-Tech Applications since 2025</p>
+        </div>
+    </footer>
+    <script src="./script/index.js"></script>
+</body>
+</html>
