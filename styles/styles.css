@@ -11,3 +11,8 @@
   .poppins-font {
     font-family: "Poppins", sans-serif;
   }
+
+.active{
+    background-color: rgb(177, 235, 196);
+    color: black;
+}
