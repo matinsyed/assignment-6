@@ -7,14 +7,13 @@ const hideSections = () =>{
     document.getElementById("footer-section").classList.add("hidden");
 }
 
+
 const showSections = () =>{
     document.getElementById("header-section").classList.remove("hidden");
     document.getElementById("learn-section").classList.remove("hidden");
     document.getElementById("faq-section").classList.remove("hidden");
     document.getElementById("footer-section").classList.remove("hidden");
 }
-
-hideSections();
 
 
 document.getElementById("btn-login").addEventListener("click", function(event){
@@ -44,10 +43,37 @@ document.getElementById("btn-login").addEventListener("click", function(event){
 })
 
 
-
-
-const checkAuthentication = () => {
-    const name = document.getElementById("name");
-    console.log(name.nodeValue)
+const loadLessonName = () => {
+    fetch("https://openapi.programming-hero.com/api/levels/all")
+    .then((res) => res.json())
+    .then((data)=>showLessonName(data.data))
+    // console.log(name.nodeValue)
     // showSections();
 }
+
+// {
+//     "id": 102,
+//     "level_no": 2,
+//     "lessonName": "Everyday Words"
+// }
+// <button id="btn-${element.lessonName}" onClick = loadCategoryVideo(${element.category_id}) class="btn btn-sm hover:bg-[#FF1F3D] hover:text-white">${element.category}</button>
+
+const showLessonName = (lessonData) =>{
+    const lessonMenu = document.getElementById("lesson-menu");
+    
+    console.log(lessonMenu);
+    lessonData.forEach(element => {
+        const lessonDiv = document.createElement("div")
+        lessonDiv.innerHTML = `
+                    <button id="btn-${element.id}" class="btn btn-outline btn-primary">
+                        <img src="./assets/fa-book-open.png" alt="">
+                        ${element.lessonName}
+                    </button>
+                `
+        lessonMenu.append(lessonDiv);
+        // console.log(element.lessonName);
+    });
+}
+loadLessonName();
+
+hideSections();

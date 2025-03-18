@@ -20,29 +20,30 @@
             </div>
             <div class="menu-section">
                 <div class="flex gap-2">
-                    <a href="">
+                    <a href="#faq-section">
                         <button class="btn btn-outline btn-primary">
                             <img src="./assets/fa-circle-question.png" alt="">
                             FAQ
                         </button>
                     </a>
-                    <a href="">
+                    <a href="#learn-section">
                         <button class="btn btn-outline btn-primary">
                             <img src="./assets/fa-book-open.png" alt="">
                             Learn
                         </button>
                     </a>
-                    <a href="">
-                        <button class="btn btn-outline btn-primary">
+                    <!-- <a href=""> -->
+                        <button id="btn-logout" onclick="hideSections()" class="btn btn-outline btn-primary">
                             <img src="./assets/fa-arrow-right-from-bracket.png" alt="">
                             Logout
                         </button>
-                    </a>
+                    <!-- </a> -->
                 </div>
             </div>
         </nav>        
     </header>
     <main>
+        <!-- Banner Section -->
         <div id="banner" class="w-11/12 mx-auto flex justify-between items-center">
             <div class="login-section">
                 <h1 class="font-bold text-5xl mb-3"><span class="text-[#00BCFF]">English</span> is Easy!!</h1>
@@ -51,9 +52,9 @@
                 </p>
                 <form>
                     <fieldset>
-                      <input value="" id="user-name" type="text" class="input" placeholder="Enter Your Name" required/><br><br>
-                      <input value="" id="pin" type="password" class="input" placeholder="Type your PIN" required/><br><br>
-                      <button type="submit" class="btn btn-primary" id="btn-login"> Get Started</button>
+                      <input value="Matin" id="user-name" type="text" class="input" placeholder="Enter Your Name" required/><br><br>
+                      <input value="123456" id="pin" type="password" class="input" placeholder="Type your PIN" required/><br><br>
+                      <button type="submit" class="btn btn-primary" id="btn-login" > Get Started</button>
                     </fieldset>
                 </form>
             
@@ -64,46 +65,63 @@
         </div>
 
         <!-- Open the modal using ID.showModal() method -->
-        <!-- <button class="btn" onclick="my_modal.showModal()">open modal</button> -->
         <dialog id="my_modal" class="modal modal-bottom sm:modal-middle">
-        <div class="modal-box flex flex-col items-center justify-center">
-            <img src="https://img.icons8.com/?size=80&id=nDGgayITKl70&format=png" alt="">
-            <h3 class="text-3xl font-bold">অভিনন্দন</h3>
-            <p class="py-4">চলুন আজ নতুন কিছু শিখা যাক</p>
-            <div class="modal-action">
-            <form method="dialog">
-                <!-- if there is a button in form, it will close the modal -->
-                <button class="btn btn-primary">OK</button>
-            </form>
+            <div class="modal-box flex flex-col items-center justify-center">
+                <img src="https://img.icons8.com/?size=80&id=nDGgayITKl70&format=png" alt="">
+                <h3 class="text-3xl font-bold">অভিনন্দন</h3>
+                <p class="py-4">চলুন আজ নতুন কিছু শিখা যাক</p>
+                <div class="modal-action">
+                <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn btn-primary">OK</button>
+                </form>
+                </div>
             </div>
-        </div>
         </dialog>
 
+        <!-- Let's Learn Vocabularies Section -->
         <div id="learn-section" class="w-11/12 mx-auto my-24">
             <div id="lesson-menu-section" class="">
                 <h2 class="font-bold text-5xl text-center">
                     <span class="text-[#00BCFF]">Let's </span>Learn Vocabularies
                 </h2>
                 <div id="lesson-menu" class="my-5 flex justify-center gap-4">
-                    <button class="btn btn-outline btn-primary">
-                        <img src="./assets/fa-book-open.png" alt="">
-                        Lesson-1
-                    </button>
-                    <button class="btn btn-outline btn-primary">
-                        <img src="./assets/fa-book-open.png" alt="">
-                        Lesson-2
-                    </button>
-                    <button class="btn btn-outline btn-primary">
-                        <img src="./assets/fa-book-open.png" alt="">
-                        Lesson-3
-                    </button>
+                    
                 </div>
             </div>
-            <div id="lesson-card" class="bg-[#F8F8F8] flex flex-col gap-5 rounded-2xl justify-center items-center py-10 mx-auto">
-               <p class="text-xs font-thin hind-siliguri-font txt-[#79716B]"> আপনি এখনো কোন Lesson Select করেন নি</p>
-               <p class="font-medium hind-siliguri-font text-3xl txt-[#292524]"> একটি Lesson Select করুন।</p>
+
+            
+
+            <div id="lesson-card" class="bg-[#F8F8F8] flex flex-col gap-5 rounded-2xl p-5 justify-center items-center mx-auto">
+                
+                <div id="default-card" class=" py-10 hidden">
+                    <p class="text-xs font-thin hind-siliguri-font txt-[#79716B]"> আপনি এখনো কোন Lesson Select করেন নি</p>
+                    <p class="font-medium hind-siliguri-font text-3xl txt-[#292524]"> একটি Lesson Select করুন।</p>     
+                </div>
+
+                <div class="card bg-base-100 card-md shadow-sm">
+                    <div class="card-body">
+                        <div class="p-3 border border-pink-100 items-center hover:bg-cyan-50">
+                            <div class="flex flex-col justify-center items-center gap-4">
+                                <h1 class="font-bold text-3xl"> Eager </h1>
+                                <h2 class="font-medium text-xl">Meaning /Pronounciation</h2>
+                                <h1 class="hind-siliguri-font font-semibold text-3xl">"আগ্রহী / ইগার"</h1>
+                            </div>
+                            <div class="flex justify-between">
+                                <div>
+                                    <img src="./assets/github-thumb.png" alt="">
+                                </div>
+                                <div>
+                                    <img src="./assets/github-thumb.png" alt="">
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
             </div>
         </div>
+
+        <!-- Frequently Asked QuestionsSection -->
         <div id="faq-section" class="w-11/12 mx-auto my-24">
             <div id="faq-title" class="mb-10">
                 <h2 class="font-bold text-5xl text-center">
@@ -129,6 +147,7 @@
             </div>
         </div>
     </main>
+    <!-- Footer Section -->
     <footer id="footer-section" class="border-t-2 border-[#FFEBEB] py-24">
         <div class="w-11/12 mx-auto">
             <h2 class="flex items-center font-semibold text-xl mb-3">
