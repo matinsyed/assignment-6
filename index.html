@@ -62,6 +62,23 @@
                 <img src="./assets/hero-student.png" alt="">
             </div>
         </div>
+
+        <!-- Open the modal using ID.showModal() method -->
+        <!-- <button class="btn" onclick="my_modal.showModal()">open modal</button> -->
+        <dialog id="my_modal" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box flex flex-col items-center justify-center">
+            <img src="https://img.icons8.com/?size=80&id=nDGgayITKl70&format=png" alt="">
+            <h3 class="text-3xl font-bold">অভিনন্দন</h3>
+            <p class="py-4">চলুন আজ নতুন কিছু শিখা যাক</p>
+            <div class="modal-action">
+            <form method="dialog">
+                <!-- if there is a button in form, it will close the modal -->
+                <button class="btn btn-primary">OK</button>
+            </form>
+            </div>
+        </div>
+        </dialog>
+
         <div id="learn-section" class="w-11/12 mx-auto my-24">
             <div id="lesson-menu-section" class="">
                 <h2 class="font-bold text-5xl text-center">

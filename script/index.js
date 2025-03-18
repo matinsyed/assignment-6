@@ -18,7 +18,7 @@ hideSections();
 
 
 document.getElementById("btn-login").addEventListener("click", function(event){
-    event.preventDefault();
+    event.preventDefault(); 
     const accountNumber  = document.getElementById("user-name").value;
     const pin = document.getElementById("pin").value;
     const convertedPIN = parseInt(pin);
@@ -27,8 +27,9 @@ document.getElementById("btn-login").addEventListener("click", function(event){
         if(convertedPIN === 123456)
         {
             // console.log(accountNumber, pin);
-            alert("Login Successful.");  
+            // alert("Login Successful.");  
             showSections();
+            document.getElementById("my_modal").showModal();
             document.getElementById("user-name").value = '';
             document.getElementById("pin").value = '';
         }else{
@@ -41,6 +42,8 @@ document.getElementById("btn-login").addEventListener("click", function(event){
     }
     
 })
+
+
 
 
 const checkAuthentication = () => {
