@@ -11,7 +11,6 @@ const hideSections = () =>{
     document.getElementById("header-section").classList.add("hidden");
     document.getElementById("learn-section").classList.add("hidden");
     document.getElementById("faq-section").classList.add("hidden");
-    document.getElementById("footer-section").classList.add("hidden");
 }
 
 
@@ -19,7 +18,6 @@ const showSections = () =>{
     document.getElementById("header-section").classList.remove("hidden");
     document.getElementById("learn-section").classList.remove("hidden");
     document.getElementById("faq-section").classList.remove("hidden");
-    document.getElementById("footer-section").classList.remove("hidden");
 }
 
 
@@ -38,11 +36,6 @@ const showSpinner = () =>  {
 const hideSpinner = () =>  {
     document.getElementById("spinner").classList.add("hidden");
     document.getElementById("lesson-card-container").classList.remove("hidden");
-}
-
-
-const showFooter = () =>{
-    document.getElementById("footer-section").classList.remove("hidden");
 }
 
 document.getElementById("btn-login").addEventListener("click", function(event){

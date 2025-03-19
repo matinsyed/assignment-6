@@ -33,7 +33,7 @@
                         </button>
                     </a>
                     <!-- <a href=""> -->
-                        <button id="btn-logout" onclick="hideSections(), showBanner(), showFooter()" class="btn btn-outline btn-primary">
+                        <button id="btn-logout" onclick="hideSections(), showBanner()" class="btn btn-outline btn-primary">
                             <img src="./assets/fa-arrow-right-from-bracket.png" alt="">
                             Logout
                         </button>
@@ -191,14 +191,24 @@
     </main>
     <!-- Footer Section -->
     <footer id="footer-section" class="border-t-2 border-[#FFEBEB] py-24">
-        <div class="w-11/12 mx-auto">
-            <h2 class="flex items-center font-semibold text-xl mb-3">
-                English
-                <img class="w-7 h-7" src="./assets/logo.png" alt="logo">
-                <span class="tiro-bangla-font">জানালা</span>
-            </h2>
-            <p class="hind-siliguri-font font-medium text-xl">ইংরেজি শিখুন সহজে</p>
-            <p class="hind-siliguri-font">Providing ED-Tech Applications since 2025</p>
+        <div class="w-11/12 mx-auto flex justify-between">
+            <div>
+                <h2 class="flex items-center font-semibold text-xl mb-3">
+                    English
+                    <img class="w-7 h-7" src="./assets/logo.png" alt="logo">
+                    <span class="tiro-bangla-font">জানালা</span>
+                </h2>
+                <p class="hind-siliguri-font font-medium text-xl">ইংরেজি শিখুন সহজে</p>
+                <p class="hind-siliguri-font">Providing ED-Tech Applications since 2025</p>
+            </div>
+            <div class="text-center">
+                <h3>FOLLOW US</h3>
+                <div class="flex gap-2">
+                    <a href="http://facebook.com/samatin" target="_blank"><img src="./assets/fb-thumb.png" alt=""></a>
+                    <img src="./assets/youtube-thumb.png" alt="">
+                    <img src="./assets/instagram-thumb.png" alt="">
+                </div>
+            </div>
         </div>
     </footer>
     <script src="./script/index.js"></script>
