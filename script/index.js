@@ -22,6 +22,7 @@ const showSections = () =>{
     document.getElementById("footer-section").classList.remove("hidden");
 }
 
+
 const hideBanner = () =>  {
     document.getElementById("banner").classList.add("hidden");
 }
@@ -29,6 +30,17 @@ const hideBanner = () =>  {
 const showBanner = () =>{
     document.getElementById("banner").classList.remove("hidden");
 }
+
+const showSpinner = () =>  {
+    document.getElementById("spinner").classList.remove("hidden");
+    document.getElementById("lesson-card-container").classList.add("hidden");
+}
+const hideSpinner = () =>  {
+    document.getElementById("spinner").classList.add("hidden");
+    document.getElementById("lesson-card-container").classList.remove("hidden");
+}
+
+
 const showFooter = () =>{
     document.getElementById("footer-section").classList.remove("hidden");
 }
@@ -66,6 +78,7 @@ const loadLessonName = () => {
 
 
 const wordsByLevel = (level) => {
+    showSpinner();  
     const url = `https://openapi.programming-hero.com/api/level/${level}`
     fetch(url).then((res) => res.json())
     .then((data) => displayWordsCard(level, data.data) )
@@ -112,7 +125,7 @@ const showLessonName = (lessonData) =>{
 // }
 
 const displayWordsCard = (level=0, wordsInfo) => {    
-    const lessonCard =  document.getElementById("lesson-card");    
+    const lessonCard =  document.getElementById("lesson-card");      
     const lessonCardContainer =  document.getElementById("lesson-card-container");
     lessonCardContainer.innerHTML = '';
 
@@ -123,7 +136,7 @@ const displayWordsCard = (level=0, wordsInfo) => {
     const defaultCard =  document.getElementById("default-card");
     const noDataCard =  document.getElementById("no-data-card");
     defaultCard.classList.add("hidden");
-
+    
     if(wordsInfo.length == 0){
         noDataCard.classList.remove("hidden");
         lessonCard.classList.remove("hidden"); 
@@ -139,7 +152,7 @@ const displayWordsCard = (level=0, wordsInfo) => {
                                 <div class="flex flex-col justify-center items-center gap-4 mb-3">
                                     <h1 class="font-bold text-3xl"> ${element.word} </h1>
                                     <h2 class="font-medium text-xl">Meaning /Pronounciation</h2>
-                                    <h1 class="hind-siliguri-font font-semibold text-3xl">"${element.meaning==null?'অর্থ নেই':element.meaning} / ${element.pronunciation}"</h1>
+                                    <h1 class="hind-siliguri-font font-semibold text-2xl">"${element.meaning==null?'অর্থ নেই':element.meaning} / ${element.pronunciation}"</h1>
                                 </div>
                                 <div class="flex justify-between m-4">
                                     <div>
@@ -154,9 +167,9 @@ const displayWordsCard = (level=0, wordsInfo) => {
                     </div>
             `
             lessonCardContainer.append(cardDiv);
-        });
+        });        
     }
-    
+    hideSpinner();
 }
 
 // {
