@@ -48,8 +48,7 @@ document.getElementById("btn-login").addEventListener("click", function(event){
             document.getElementById("my_modal").showModal();
             document.getElementById("user-name").value = '';
             document.getElementById("pin").value = '';
-        }else{
-            console.log(accountNumber, pin);
+        }else{            
             alert("User Name or Password is invalid.");
         }
     }
@@ -158,7 +157,7 @@ const displayWordsCard = (level=0, wordsInfo) => {
                     </div>
             `
             lessonCardContainer.append(cardDiv);
-            console.log(cardDiv);
+            // console.log(cardDiv);
         });
     }
     
@@ -180,7 +179,37 @@ const displayWordsCard = (level=0, wordsInfo) => {
 //     "id": 5
 // }
 const displayWordDetails = (wordDetails) =>{
-    console.log(wordDetails);
+    const wordDetailsContainer = document.getElementById("word_details_modal");
+    let synonymData = '';
+    wordDetails.synonyms.forEach(synonym => {
+       synonymData += '<button class="btn">'+synonym+'</button>';
+    }) 
+
+    wordDetailsContainer.innerHTML = '';
+    const modalDiv = document.createElement("div");
+    modalDiv.innerHTML =    `
+            <div class="modal-box p-5">
+                <div class="border border-purple-300 rounded-xl p-5">
+                    <h3 class="text-2xl font-bold flex mb-4"> ${wordDetails.word} (<img src="https://img.icons8.com/?size=32&id=on1HLpS0ufWk&format=png" alt="">    :${wordDetails.pronunciation})</h3>
+                    <p class="font-medium py-2 text-lg">Meaning</p>
+                    <p class="font-semibold">${wordDetails.meaning==null?'অর্থ নেই':wordDetails.meaning}</p>
+                    <h3 class="font-semibold pt-2">Example</h3>
+                    <p class="pb-2">${wordDetails.sentence}</p>
+                    <h3 class="py-2 text-lg font-semibold">সমার্থক শব্দ গুলো</h3>
+                    <div class="flex gap-2">
+                        ${synonymData}  
+                    </div>                    
+                </div>
+                <div class="mt-3">
+                    <form method="dialog">
+                        <button class="btn btn-primary">Complete Learning</button>
+                    </form>
+                </div>
+            </div>
+    `
+    wordDetailsContainer.append(modalDiv);
+    wordDetailsContainer.showModal();
+    // console.log(wordDetails);
 }
 
 loadLessonName();
