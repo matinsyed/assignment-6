@@ -4,7 +4,6 @@ function removeActiveClass(){
     const activeBtns = document.getElementsByClassName("active");
     for (let activeBtn of activeBtns){
       activeBtn.classList.remove("active");
-    //    console.log(activeBtn);
     }
 }
 
@@ -63,8 +62,6 @@ const loadLessonName = () => {
     fetch("https://openapi.programming-hero.com/api/levels/all")
     .then((res) => res.json())
     .then((data)=>showLessonName(data.data))
-    // console.log(name.nodeValue)
-    // showSections();
 }
 
 
@@ -139,12 +136,12 @@ const displayWordsCard = (level=0, wordsInfo) => {
                 <div class="card bg-base-100 card-md shadow-sm">
                         <div class="card-body">
                             <div class="p-3 border border-pink-100 items-center hover:bg-cyan-50">
-                                <div class="flex flex-col justify-center items-center gap-4">
+                                <div class="flex flex-col justify-center items-center gap-4 mb-3">
                                     <h1 class="font-bold text-3xl"> ${element.word} </h1>
                                     <h2 class="font-medium text-xl">Meaning /Pronounciation</h2>
                                     <h1 class="hind-siliguri-font font-semibold text-3xl">"${element.meaning==null?'অর্থ নেই':element.meaning} / ${element.pronunciation}"</h1>
                                 </div>
-                                <div class="flex justify-between">
+                                <div class="flex justify-between m-4">
                                     <div>
                                         <button id="btn-10" class="btn" onClick="loadWordDetails(${element.id})"><img src="https://img.icons8.com/?size=48&id=JJjDa0GHZLiS&format=png" alt=""></button>
                                     </div>
@@ -157,7 +154,6 @@ const displayWordsCard = (level=0, wordsInfo) => {
                     </div>
             `
             lessonCardContainer.append(cardDiv);
-            // console.log(cardDiv);
         });
     }
     
